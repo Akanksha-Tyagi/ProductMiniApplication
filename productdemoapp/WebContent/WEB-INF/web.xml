@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee; http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/javaee; http://xmlns.jcp.org/xml/ns/javaee" id="WebApp_ID" version="2.5">
+  <display-name>productdemoapp</display-name>
+  
+  
+   <!-- Welcome File -->
+  
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Mapping of product controller -->
+  <servlet>
+    <servlet-name>ProductController</servlet-name>
+    <servlet-class>com.productapp.controller.ProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductController</servlet-name>
+    <url-pattern>/ProductController</url-pattern>
+  </servlet-mapping>
+  
+   <!-- Mapping of product update controller -->
+  
+  <servlet>
+    <servlet-name>ProductUpdateController</servlet-name>
+    <servlet-class>com.productapp.controller.ProductUpdateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductUpdateController</servlet-name>
+    <url-pattern>/ProductUpdateController</url-pattern>
+  </servlet-mapping>
+  
+   <!-- Mapping of ForgetPasswordController -->
+   <servlet>
+    <servlet-name>ForgetPasswordController</servlet-name>
+    <servlet-class>com.productapp.controller.ForgetPasswordController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgetPasswordController</servlet-name>
+    <url-pattern>/ForgetPasswordController</url-pattern>
+  </servlet-mapping>
+  
+   <!-- Mapping of login controller -->
+   <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.productapp.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- Mapping of logout controller -->
+    
+   <servlet>
+    <servlet-name>LogOutController</servlet-name>
+    <servlet-class>com.productapp.controller.LogOutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogOutController</servlet-name>
+    <url-pattern>/LogOutController</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- Mapping of Security Filter -->
+   <filter>
+    <filter-name>SecurityFilter</filter-name>
+    <filter-class>com.productapp.filters.SecurityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SecurityFilter</filter-name>
+    <url-pattern>/</url-pattern>
+  </filter-mapping>
+  
+    <!-- Mapping of Login Filter -->
+  
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.productapp.filters.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/</url-pattern>
+  </filter-mapping>
+  
+  
+  
+</web-app>
